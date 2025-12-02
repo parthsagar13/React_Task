@@ -182,7 +182,7 @@ export default function Landing() {
       <footer className="bg-gray-900 text-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400">
-            © 2024 ProductHub. All rights reserved.
+            © 2024 CoffeeHub. All rights reserved.
           </p>
         </div>
       </footer>
