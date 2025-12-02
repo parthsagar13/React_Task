@@ -22,12 +22,14 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2 text-2xl font-bold text-blue-600 hover:text-blue-700 transition"
+            className="flex items-center gap-2 text-2xl font-bold hover:opacity-80 transition"
           >
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
-              P
-            </div>
-            <span className="hidden sm:inline">ProductHub</span>
+            <img
+              src="https://cdn.builder.io/o/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F3bb902667cd94dfbb61f18770919f280?alt=media&token=611af89f-e41d-4ffa-b9f6-3b2573f8bd24&apiKey=aaf2fc6ee0af440db01ff41c78de501a"
+              alt="Logo"
+              className="h-10 w-auto"
+            />
+            <span className="hidden sm:inline text-gray-900">CoffeeHub</span>
           </Link>
 
           {/* Desktop Menu */}
