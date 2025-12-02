@@ -48,7 +48,14 @@ export default function Products() {
   // Load products from localStorage
   const loadProducts = () => {
     const stored = localStorage.getItem("products");
-    const productsList = stored ? JSON.parse(stored) : [];
+    let productsList = stored ? JSON.parse(stored) : [];
+
+    // Initialize with sample products if empty
+    if (productsList.length === 0) {
+      productsList = SAMPLE_PRODUCTS;
+      localStorage.setItem("products", JSON.stringify(productsList));
+    }
+
     setProducts(productsList);
     filterProducts(productsList, searchTerm, selectedCategory);
   };
