@@ -276,6 +276,19 @@ export default function Products() {
                         index % 2 === 0 ? "bg-white" : "bg-gray-50"
                       }`}
                     >
+                      <td className="px-6 py-4 text-sm">
+                        {product.image ? (
+                          <img
+                            src={product.image}
+                            alt={product.title}
+                            className="h-16 w-16 object-cover rounded"
+                          />
+                        ) : (
+                          <div className="h-16 w-16 bg-gray-200 rounded flex items-center justify-center text-gray-400">
+                            No image
+                          </div>
+                        )}
+                      </td>
                       <td className="px-6 py-4 text-sm font-medium text-gray-900">
                         {product.title}
                       </td>
