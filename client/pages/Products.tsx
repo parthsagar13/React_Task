@@ -11,9 +11,10 @@ export interface Product {
   price: number;
   description: string;
   category: string;
+  image?: string;
 }
 
-const CATEGORIES = ["Electronics", "Clothing", "Food", "Books", "Other"];
+const CATEGORIES = ["Coffee", "Bundle", "Accessories", "Equipment", "Other"];
 
 export default function Products() {
   const navigate = useNavigate();
