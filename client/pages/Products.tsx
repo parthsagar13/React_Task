@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useAuth } from "@/context/AuthContext";
 import Navbar from "@/components/Navbar";
 import { Eye, Trash2, Edit, Plus, Search, X } from "lucide-react";
+import { SAMPLE_PRODUCTS } from "@/utils/sampleProducts";
 
 export interface Product {
   id: string;
