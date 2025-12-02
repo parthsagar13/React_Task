@@ -1,0 +1,68 @@
+import { Product } from "@/pages/Products";
+
+export const SAMPLE_PRODUCTS: Product[] = [
+  {
+    id: "1",
+    title: "Premium Arabica Blend",
+    price: 12.99,
+    description: "Single-origin coffee from the highlands of Ethiopia with fruity notes and medium roast",
+    category: "Coffee",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F92fff2c14d274f829f70b9d4cbc3064e?format=webp&width=800",
+  },
+  {
+    id: "2",
+    title: "Dark Roast Espresso",
+    price: 13.99,
+    description: "Bold and rich dark roast perfect for espresso machines and strong coffee lovers",
+    category: "Coffee",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fb64ce8927a4c4c43958d9ce53570d7f3?format=webp&width=800",
+  },
+  {
+    id: "3",
+    title: "Easy Pour Sampler Pack",
+    price: 14.99,
+    description: "Convenient pre-portioned coffee packets for easy brewing without equipment",
+    category: "Coffee",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F6e11841ae24c47da81a489d07b09ee95?format=webp&width=800",
+  },
+  {
+    id: "4",
+    title: "Birthday Special Party Pours",
+    price: 15.99,
+    description: "Delicate, complex, and experimental coffee blend for special celebrations",
+    category: "Coffee",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fd562816cde3a476394d18812848ee54f?format=webp&width=800",
+  },
+  {
+    id: "5",
+    title: "Cold Brew Concentrate",
+    price: 11.99,
+    description: "Smooth and refreshing cold brew concentrate ready to serve over ice",
+    category: "Coffee",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fbeddf53041c84b74b7817992576f2edf?format=webp&width=800",
+  },
+  {
+    id: "6",
+    title: "Vienna Roast Premium",
+    price: 13.49,
+    description: "Classic Vienna roast with rich chocolate and nutty undertones",
+    category: "Coffee",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F1a33d7aeb6804239b3072e499ab91534?format=webp&width=800",
+  },
+  {
+    id: "7",
+    title: "Summer Essentials Bundle",
+    price: 34.99,
+    description: "Complete set of summer coffee essentials including iced coffee and brewing supplies",
+    category: "Bundle",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F38ee56f72a984962aa1aae805e2eb202?format=webp&width=800",
+  },
+  {
+    id: "8",
+    title: "Artisan Estate Roast",
+    price: 14.49,
+    description: "Single-origin coffee from a sustainable farm with balanced, smooth flavor profile",
+    category: "Coffee",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F1a357a1a246648f88f61eee6de3b414f?format=webp&width=800",
+  },
+];
