@@ -64,9 +64,12 @@ export default function Landing() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <div
-              className={`w-full h-full bg-gradient-to-r ${image.gradient} flex flex-col items-center justify-center text-white`}
-            >
+            <img
+              src={image.image}
+              alt={image.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center px-4">
                 {image.title}
               </h2>
