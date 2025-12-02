@@ -7,27 +7,27 @@ import Navbar from "@/components/Navbar";
 const CAROUSEL_IMAGES = [
   {
     id: 1,
-    title: "Discover Amazing Products",
-    description: "Explore our vast collection of premium items",
-    gradient: "from-blue-500 to-blue-600",
+    title: "Premium Coffee Selection",
+    description: "Discover our finest coffee beans from around the world",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F92fff2c14d274f829f70b9d4cbc3064e?format=webp&width=800",
   },
   {
     id: 2,
-    title: "Best Deals Online",
-    description: "Get exclusive discounts on your favorite products",
-    gradient: "from-purple-500 to-purple-600",
+    title: "Specialty Coffee Blends",
+    description: "Expertly curated blends for every taste",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fb64ce8927a4c4c43958d9ce53570d7f3?format=webp&width=800",
   },
   {
     id: 3,
-    title: "Fast & Reliable",
-    description: "Quality service you can trust",
-    gradient: "from-green-500 to-green-600",
+    title: "Easy Pour Experience",
+    description: "Convenient brewing solutions for coffee lovers",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F6e11841ae24c47da81a489d07b09ee95?format=webp&width=800",
   },
   {
     id: 4,
-    title: "Easy Management",
-    description: "Create and manage your products effortlessly",
-    gradient: "from-orange-500 to-orange-600",
+    title: "Taste Excellence",
+    description: "Experience the finest quality in every cup",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fd562816cde3a476394d18812848ee54f?format=webp&width=800",
   },
 ];
 
