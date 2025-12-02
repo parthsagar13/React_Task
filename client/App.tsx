@@ -15,7 +15,7 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+createRoot(document.getElementById("root")!).render(
   <QueryClientProvider client={queryClient}>
     <AuthProvider>
       <TooltipProvider>
@@ -35,5 +35,3 @@ const App = () => (
     </AuthProvider>
   </QueryClientProvider>
 );
-
-createRoot(document.getElementById("root")!).render(<App />);
