@@ -136,7 +136,8 @@ export default function Products() {
       title: "",
       price: 0,
       description: "",
-      category: "Electronics",
+      category: "Coffee",
+      image: "",
     });
   };
 
