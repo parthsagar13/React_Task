@@ -154,6 +154,7 @@ export default function Products() {
       price: product.price,
       description: product.description,
       category: product.category,
+      image: product.image || "",
     });
     setShowModal(true);
   };
