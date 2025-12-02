@@ -9,25 +9,29 @@ const CAROUSEL_IMAGES = [
     id: 1,
     title: "Premium Coffee Selection",
     description: "Discover our finest coffee beans from around the world",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F92fff2c14d274f829f70b9d4cbc3064e?format=webp&width=800",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F92fff2c14d274f829f70b9d4cbc3064e?format=webp&width=800",
   },
   {
     id: 2,
     title: "Specialty Coffee Blends",
     description: "Expertly curated blends for every taste",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fb64ce8927a4c4c43958d9ce53570d7f3?format=webp&width=800",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fb64ce8927a4c4c43958d9ce53570d7f3?format=webp&width=800",
   },
   {
     id: 3,
     title: "Easy Pour Experience",
     description: "Convenient brewing solutions for coffee lovers",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F6e11841ae24c47da81a489d07b09ee95?format=webp&width=800",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F6e11841ae24c47da81a489d07b09ee95?format=webp&width=800",
   },
   {
     id: 4,
     title: "Taste Excellence",
     description: "Experience the finest quality in every cup",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fd562816cde3a476394d18812848ee54f?format=webp&width=800",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fd562816cde3a476394d18812848ee54f?format=webp&width=800",
   },
 ];
 
@@ -47,7 +51,7 @@ export default function Landing() {
 
   const prevSlide = () => {
     setCurrentSlide(
-      (prev) => (prev - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length
+      (prev) => (prev - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length,
     );
   };
 
@@ -125,8 +129,7 @@ export default function Landing() {
             },
             {
               title: "Secure Storage",
-              description:
-                "Your data is safely stored locally on your device",
+              description: "Your data is safely stored locally on your device",
               icon: "🔒",
             },
             {
@@ -161,7 +164,10 @@ export default function Landing() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/signup">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100"
+              >
                 Sign Up Now
               </Button>
             </Link>

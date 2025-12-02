@@ -100,7 +100,9 @@ export default function Navbar() {
               <>
                 <div className="px-2 py-2 border-b">
                   <p className="text-sm text-gray-600">Welcome back</p>
-                  <p className="font-semibold text-gray-900">{user?.username}</p>
+                  <p className="font-semibold text-gray-900">
+                    {user?.username}
+                  </p>
                 </div>
                 <Link to="/products">
                   <Button

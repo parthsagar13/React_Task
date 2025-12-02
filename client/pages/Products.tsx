@@ -64,7 +64,7 @@ export default function Products() {
   const filterProducts = (
     productsList: Product[],
     search: string,
-    category: string
+    category: string,
   ) => {
     let filtered = productsList;
 
@@ -73,7 +73,7 @@ export default function Products() {
         (p) =>
           p.title.toLowerCase().includes(search.toLowerCase()) ||
           p.description.toLowerCase().includes(search.toLowerCase()) ||
-          p.category.toLowerCase().includes(search.toLowerCase())
+          p.category.toLowerCase().includes(search.toLowerCase()),
       );
     }
 
@@ -107,15 +107,11 @@ export default function Products() {
 
     if (editingProduct) {
       const updated = products.map((p) =>
-        p.id === editingProduct.id
-          ? { ...formData, id: editingProduct.id }
-          : p
+        p.id === editingProduct.id ? { ...formData, id: editingProduct.id } : p,
       );
       setProducts(updated);
       localStorage.setItem("products", JSON.stringify(updated));
-      alert(
-        `Product "${formData.title}" updated successfully!`
-      );
+      alert(`Product "${formData.title}" updated successfully!`);
       console.log("Updated Product:", { ...formData, id: editingProduct.id });
     } else {
       const newProduct: Product = {
@@ -161,11 +157,7 @@ export default function Products() {
 
   // Delete product
   const handleDeleteProduct = (product: Product) => {
-    if (
-      confirm(
-        `Are you sure you want to delete "${product.title}"?`
-      )
-    ) {
+    if (confirm(`Are you sure you want to delete "${product.title}"?`)) {
       const updated = products.filter((p) => p.id !== product.id);
       setProducts(updated);
       localStorage.setItem("products", JSON.stringify(updated));
