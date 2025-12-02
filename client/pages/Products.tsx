@@ -353,6 +353,16 @@ export default function Products() {
               </button>
             </div>
 
+            {viewingProduct.image && (
+              <div className="mb-4">
+                <img
+                  src={viewingProduct.image}
+                  alt={viewingProduct.title}
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+              </div>
+            )}
+
             <div className="space-y-4">
               <div>
                 <label className="text-sm font-semibold text-gray-700">
