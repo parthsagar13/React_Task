@@ -249,6 +249,9 @@ export default function Products() {
                 <thead className="bg-gray-100 border-b border-gray-300">
                   <tr>
                     <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
+                      Image
+                    </th>
+                    <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
                       Title
                     </th>
                     <th className="px-6 py-3 text-left text-sm font-semibold text-gray-700">
