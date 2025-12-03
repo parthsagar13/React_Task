@@ -55,14 +55,12 @@ export default function Login() {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Error Message */}
             {error && (
               <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
                 {error}
               </div>
             )}
 
-            {/* Username Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Username
@@ -77,7 +75,6 @@ export default function Login() {
               />
             </div>
 
-            {/* Password Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
@@ -92,7 +89,6 @@ export default function Login() {
               />
             </div>
 
-            {/* Submit Button */}
             <Button
               type="submit"
               disabled={isSubmitting}
@@ -102,7 +98,6 @@ export default function Login() {
             </Button>
           </form>
 
-          {/* Sign Up Link */}
           <p className="text-center text-gray-600 mt-6">
             Don't have an account?{" "}
             <Link

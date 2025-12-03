@@ -95,7 +95,6 @@ export default function SignUp() {
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Username Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Username
@@ -115,7 +114,6 @@ export default function SignUp() {
               )}
             </div>
 
-            {/* Email Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email
@@ -135,7 +133,6 @@ export default function SignUp() {
               )}
             </div>
 
-            {/* Password Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
@@ -155,7 +152,6 @@ export default function SignUp() {
               )}
             </div>
 
-            {/* Confirm Password Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Confirm Password
@@ -179,7 +175,6 @@ export default function SignUp() {
               )}
             </div>
 
-            {/* Submit Button */}
             <Button
               type="submit"
               disabled={isSubmitting}
@@ -189,7 +184,6 @@ export default function SignUp() {
             </Button>
           </form>
 
-          {/* Login Link */}
           <p className="text-center text-gray-600 mt-6">
             Already have an account?{" "}
             <Link to="/login" className="text-blue-600 font-semibold hover:underline">

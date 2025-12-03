@@ -19,7 +19,7 @@ const CATEGORIES = ["Coffee", "Bundle", "Accessories", "Equipment", "Other"];
 
 export default function Products() {
   const navigate = useNavigate();
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, isLoading } = useAuth();
 
   const [products, setProducts] = useState<Product[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
@@ -36,21 +36,20 @@ export default function Products() {
     image: "",
   });
 
-  // Check authentication
   useEffect(() => {
+    if (isLoading) return;
+    
     if (!isLoggedIn) {
       navigate("/login");
     } else {
       loadProducts();
     }
-  }, [isLoggedIn, navigate]);
+  }, [isLoggedIn, isLoading, navigate]);
 
-  // Load products from localStorage
   const loadProducts = () => {
     const stored = localStorage.getItem("products");
     let productsList = stored ? JSON.parse(stored) : [];
 
-    // Initialize with sample products if empty
     if (productsList.length === 0) {
       productsList = SAMPLE_PRODUCTS;
       localStorage.setItem("products", JSON.stringify(productsList));
@@ -60,7 +59,6 @@ export default function Products() {
     filterProducts(productsList, searchTerm, selectedCategory);
   };
 
-  // Filter products based on search and category
   const filterProducts = (
     productsList: Product[],
     search: string,
@@ -84,21 +82,18 @@ export default function Products() {
     setFilteredProducts(filtered);
   };
 
-  // Handle search
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearchTerm(value);
     filterProducts(products, value, selectedCategory);
   };
 
-  // Handle category filter
   const handleCategoryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;
     setSelectedCategory(value);
     filterProducts(products, searchTerm, value);
   };
 
-  // Save product
   const handleSaveProduct = () => {
     if (!formData.title || !formData.price || !formData.description) {
       alert("Please fill in all fields");
@@ -137,12 +132,10 @@ export default function Products() {
     });
   };
 
-  // View product
   const handleViewProduct = (product: Product) => {
     setViewingProduct(product);
   };
 
-  // Edit product
   const handleEditProduct = (product: Product) => {
     setEditingProduct(product);
     setFormData({
@@ -155,7 +148,6 @@ export default function Products() {
     setShowModal(true);
   };
 
-  // Delete product
   const handleDeleteProduct = (product: Product) => {
     if (confirm(`Are you sure you want to delete "${product.title}"?`)) {
       const updated = products.filter((p) => p.id !== product.id);
@@ -167,7 +159,6 @@ export default function Products() {
     }
   };
 
-  // Reset form
   const handleResetForm = () => {
     setShowModal(false);
     setEditingProduct(null);
@@ -180,12 +171,19 @@ export default function Products() {
     });
   };
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-gray-500">Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Products</h1>
           <Button
@@ -197,10 +195,8 @@ export default function Products() {
           </Button>
         </div>
 
-        {/* Search and Filter Section */}
         <div className="bg-white rounded-lg shadow p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Search Bar */}
             <div className="relative">
               <Search className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
               <input
@@ -212,7 +208,6 @@ export default function Products() {
               />
             </div>
 
-            {/* Category Filter */}
             <div>
               <select
                 value={selectedCategory}
@@ -230,7 +225,6 @@ export default function Products() {
           </div>
         </div>
 
-        {/* Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           {filteredProducts.length === 0 ? (
             <div className="p-8 text-center text-gray-500">
@@ -330,7 +324,6 @@ export default function Products() {
         </div>
       </div>
 
-      {/* View Product Modal */}
       {viewingProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6">
@@ -391,7 +384,6 @@ export default function Products() {
         </div>
       )}
 
-      {/* Create/Edit Product Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6">

@@ -10,28 +10,28 @@ const CAROUSEL_IMAGES = [
     title: "Premium Coffee Selection",
     description: "Discover our finest coffee beans from around the world",
     image:
-      "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F92fff2c14d274f829f70b9d4cbc3064e?format=webp&width=800",
+      "Slider/Coffee 1.jpg",
   },
   {
     id: 2,
     title: "Specialty Coffee Blends",
     description: "Expertly curated blends for every taste",
     image:
-      "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fb64ce8927a4c4c43958d9ce53570d7f3?format=webp&width=800",
+      "Slider/Coffee 2.webp",
   },
   {
     id: 3,
     title: "Easy Pour Experience",
     description: "Convenient brewing solutions for coffee lovers",
     image:
-      "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F6e11841ae24c47da81a489d07b09ee95?format=webp&width=800",
+      "Slider/Coffee 3.webp",
   },
   {
     id: 4,
     title: "Taste Excellence",
     description: "Experience the finest quality in every cup",
     image:
-      "https://cdn.builder.io/api/v1/image/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2Fd562816cde3a476394d18812848ee54f?format=webp&width=800",
+      "Slider/Coffee 4.webp",
   },
 ];
 
@@ -59,7 +59,6 @@ export default function Landing() {
     <div className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero Section with Carousel */}
       <div className="relative h-96 md:h-[500px] w-full overflow-hidden">
         {CAROUSEL_IMAGES.map((image, index) => (
           <div
@@ -84,7 +83,6 @@ export default function Landing() {
           </div>
         ))}
 
-        {/* Carousel Controls */}
         <button
           onClick={prevSlide}
           className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full transition"
@@ -98,7 +96,6 @@ export default function Landing() {
           <ChevronRight className="w-6 h-6 text-gray-800" />
         </button>
 
-        {/* Dot Indicators */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {CAROUSEL_IMAGES.map((_, index) => (
             <button
@@ -114,7 +111,6 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* Features Section */}
       <section className="py-16 px-4 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
           Why Choose Us?
@@ -153,7 +149,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -184,7 +179,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400">

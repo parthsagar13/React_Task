@@ -19,20 +19,17 @@ export default function Navbar() {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link
             to="/"
             className="flex items-center gap-2 text-2xl font-bold hover:opacity-80 transition"
           >
             <img
-              src="https://cdn.builder.io/o/assets%2Faaf2fc6ee0af440db01ff41c78de501a%2F3bb902667cd94dfbb61f18770919f280?alt=media&token=611af89f-e41d-4ffa-b9f6-3b2573f8bd24&apiKey=aaf2fc6ee0af440db01ff41c78de501a"
+              src="/logo.png"
               alt="Logo"
               className="h-10 w-auto"
             />
-            <span className="hidden sm:inline text-gray-900">CoffeeHub</span>
           </Link>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-4">
             {isLoggedIn ? (
               <>
@@ -80,7 +77,6 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -93,7 +89,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 flex flex-col gap-3">
             {isLoggedIn ? (
